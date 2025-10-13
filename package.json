@@ -1,0 +1,16 @@
+{
+  "name": "com.tellory.framework.stackableui",
+  "displayName": "Stackable UI",
+  "description": "The Stackable UI package provides a set of tools and components to create dynamic and flexible user interfaces in Unity. It allows developers to nest UI elements inside each other, enabling the creation of complex layouts and interactions with ease.",
+  "version": "0.0.2",
+  "unity": "6000.0",
+  "unityRelease": "58f1",
+  "dependencies": {
+    "com.unity.inputsystem": "1.14.2"
+  },
+  "author": {
+    "name": "Rodrigo Saguer",
+    "email": "extelendev@gmail.com",
+    "url": "https://github.com/Extelen"
+  }
+}
