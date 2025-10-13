@@ -11,7 +11,10 @@ namespace Tellory.StackableUI.Extensions
             seconds = Mathf.Max(0, seconds);
 
             if (seconds == 0)
+            {
                 action?.Invoke();
+                return null;
+            }
 
             return monoBehaviour.StartCoroutine(ExecuteOnSecondsCoroutine(seconds, action, useScaledTime));
         }
