@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Tellory.StackableUI.Transitions
 {
@@ -55,6 +56,12 @@ namespace Tellory.StackableUI.Transitions
         {
             if (m_isTransitionInitialized)
                 return;
+
+            if (m_transitionBehaviours == null || m_transitionBehaviours.Count == 0)
+            {
+                Debug.LogError("Composite Transitions doesn't have any transition assigned", this);
+                return;
+            }
 
             m_transitions = new List<ITransition>();
 

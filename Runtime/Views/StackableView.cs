@@ -23,7 +23,7 @@ namespace Tellory.StackableUI.Views
         private bool m_hasTransitionBeenInitialized;
 
         // Properties
-        private float m_showAnimationDuration = -1;
+        private float m_showAnimationDuration;
         public float ShowAnimationDuration
         {
             get
@@ -33,7 +33,7 @@ namespace Tellory.StackableUI.Views
             }
         }
 
-        private float m_hideAnimationDuration = -1;
+        private float m_hideAnimationDuration;
         public float HideAnimationDuration
         {
             get
@@ -60,6 +60,12 @@ namespace Tellory.StackableUI.Views
             if (m_hasTransitionBeenInitialized)
                 return;
 
+            if (m_transitionBehaviour == null)
+            {
+                m_hasTransitionBeenInitialized = true;
+                return;
+            }
+
             if (m_transitionBehaviour is not ITransition transition)
             {
                 Debug.LogError("Transition behaviour doesn't implement ITransition");
@@ -79,7 +85,7 @@ namespace Tellory.StackableUI.Views
             gameObject.SetActive(true);
             CheckTransitionSetup();
 
-            m_transition.ShowInstantly();
+            m_transition?.ShowInstantly();
 
             CancelDeactivation();
         }
@@ -110,7 +116,7 @@ namespace Tellory.StackableUI.Views
             }
 
             CheckTransitionSetup();
-            m_transition.Hide(m_useScaledTime);
+            m_transition?.Hide(m_useScaledTime);
 
             m_disableOnTransitionEnd = this.ExecuteOnSeconds(HideAnimationDuration, () => gameObject.SetActive(false), m_useScaledTime);
         }
