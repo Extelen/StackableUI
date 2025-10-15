@@ -28,7 +28,7 @@ namespace Tellory.StackableUI.Manager
             if (deepestNester == null || depth == 0)
                 return false;
 
-            if (deepestNester.NestedView == DefaultNestedView as IViewNester)
+            if (deepestNester.NestedView == BaseView as IViewNester)
                 return false;
 
             if (deepestNester.NestedView is not IViewBackHandler backHandler)

@@ -128,9 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Health
   m_isBackNavigationAllowed: 1
@@ -1543,9 +1544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Main
   m_isBackNavigationAllowed: 1
@@ -1768,9 +1770,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 6956601817238975351}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 6956601817238975351}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours:
   - {fileID: 6956601817238975351}
   - {fileID: 5150333024060958298}
@@ -2031,9 +2034,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: XP
   m_isBackNavigationAllowed: 1
@@ -2253,9 +2257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 273550809847736017}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 273550809847736017}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours:
   - {fileID: 273550809847736017}
   - {fileID: 8796862056109232810}
@@ -2732,9 +2737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Inventory
   m_isBackNavigationAllowed: 1
@@ -3305,9 +3311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Pause
   m_isBackNavigationAllowed: 1
@@ -3939,9 +3946,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Main
   m_isBackNavigationAllowed: 1
@@ -4436,9 +4444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Buttons
   m_isBackNavigationAllowed: 1
@@ -4838,9 +4847,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ee65bc396171b4da634fa8e4117ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Game
   m_isBackNavigationAllowed: 1
@@ -5170,9 +5180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Confirmation
   m_isBackNavigationAllowed: 0
@@ -5392,9 +5403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 2499592326799086303}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 2499592326799086303}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours:
   - {fileID: 2499592326799086303}
   - {fileID: 6913602942363755847}
@@ -6089,9 +6101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6ec3f2f9b6f88d4697ab8b25929a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 0}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 0}
+  m_baseView: {fileID: 0}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours: []
   m_identifier: Minimap
   m_isBackNavigationAllowed: 1
@@ -6398,9 +6411,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6103978e73b22c47a46a58eb6432810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_showDefaultViewInstantly: 0
-  m_defaultNestedView: {fileID: 3922278531684109823}
-  m_openDefaultViewAtNestedClose: 1
+  m_showInitialViewInstantly: 0
+  m_initialView: {fileID: 3922278531684109823}
+  m_baseView: {fileID: 3922278531684109823}
+  m_useInitialViewAsBase: 1
   m_nestedViewBehaviours:
   - {fileID: 3922278531684109823}
   - {fileID: 4704744650451131987}

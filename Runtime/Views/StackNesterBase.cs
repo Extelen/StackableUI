@@ -7,17 +7,24 @@ namespace Tellory.StackableUI.Views
     {
         // Fields
         [SerializeField]
-        private bool m_showDefaultViewInstantly;
+        private bool m_showInitialViewInstantly;
 
         [SerializeField]
-        private MonoBehaviour m_defaultNestedView;
-        public MonoBehaviour DefaultNestedView
+        private MonoBehaviour m_initialView;
+        public MonoBehaviour InitialView
         {
-            get => m_defaultNestedView;
+            get => m_initialView;
         }
 
         [SerializeField]
-        private bool m_openDefaultViewAtNestedClose = true;
+        private MonoBehaviour m_baseView;
+        public MonoBehaviour BaseView
+        {
+            get => m_baseView;
+        }
+
+        [SerializeField]
+        private bool m_useInitialViewAsBase = true;
 
         [SerializeField]
         private List<MonoBehaviour> m_nestedViewBehaviours;
@@ -37,7 +44,7 @@ namespace Tellory.StackableUI.Views
         protected virtual void OnEnable()
         {
             CloseAllViewsInstantly();
-            TryShowDefaultView();
+            TryShowInitialView();
         }
 
         protected virtual void OnDisable()
@@ -48,12 +55,12 @@ namespace Tellory.StackableUI.Views
         protected virtual void Start() { }
         protected virtual void Reset() { }
 
-        private void TryShowDefaultView()
+        private void TryShowInitialView()
         {
-            if (m_defaultNestedView == null)
+            if (m_initialView == null)
                 return;
 
-            SwitchView(m_defaultNestedView, m_showDefaultViewInstantly);
+            SwitchView(m_initialView, m_showInitialViewInstantly);
         }
 
         protected void TrySetupViews()
@@ -151,13 +158,12 @@ namespace Tellory.StackableUI.Views
 
         public virtual void OnNestedViewClose()
         {
-            if (m_openDefaultViewAtNestedClose && m_defaultNestedView)
+            MonoBehaviour desiredView = m_useInitialViewAsBase ? m_initialView : m_baseView;
+
+            if (desiredView && (desiredView as IView) != NestedView)
             {
-                if ((m_defaultNestedView as IView) != NestedView)
-                {
-                    SwitchView(m_defaultNestedView);
-                    return;
-                }
+                SwitchView(desiredView);
+                return;
             }
 
             NestedView = null;

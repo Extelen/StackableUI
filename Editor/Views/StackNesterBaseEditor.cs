@@ -7,9 +7,10 @@ using Tellory.StackableUI.Views;
 public class StackNesterBaseEditor : Editor
 {
     // Fields
-    private SerializedProperty m_showDefaultViewInstantlyProperty;
-    private SerializedProperty m_defaultNestedViewProperty;
-    private SerializedProperty m_openDefaultViewAtNestedCloseProperty;
+    private SerializedProperty m_showInitialViewInstantlyProperty;
+    private SerializedProperty m_initialViewProperty;
+    private SerializedProperty m_useInitialViewAsBaseProperty;
+    private SerializedProperty m_baseViewProperty;
     private SerializedProperty m_nestedViewBehavioursProperty;
 
     private List<string> m_requiredImplementationCacheNames;
@@ -17,9 +18,10 @@ public class StackNesterBaseEditor : Editor
     // Methods
     protected virtual void OnEnable()
     {
-        m_showDefaultViewInstantlyProperty = serializedObject.FindProperty("m_showDefaultViewInstantly");
-        m_defaultNestedViewProperty = serializedObject.FindProperty("m_defaultNestedView");
-        m_openDefaultViewAtNestedCloseProperty = serializedObject.FindProperty("m_openDefaultViewAtNestedClose");
+        m_showInitialViewInstantlyProperty = serializedObject.FindProperty("m_showInitialViewInstantly");
+        m_initialViewProperty = serializedObject.FindProperty("m_initialView");
+        m_useInitialViewAsBaseProperty = serializedObject.FindProperty("m_useInitialViewAsBase");
+        m_baseViewProperty = serializedObject.FindProperty("m_baseView");
         m_nestedViewBehavioursProperty = serializedObject.FindProperty("m_nestedViewBehaviours");
 
         m_requiredImplementationCacheNames = new List<string>();
@@ -38,13 +40,19 @@ public class StackNesterBaseEditor : Editor
 
         if (m_nestedViewBehavioursProperty.arraySize > 0)
         {
-            EditorGUILayout.PropertyField(m_defaultNestedViewProperty, new GUIContent("Default IView"));
-            bool defaultViewIsCorrectType = TypeRequirement.DrawObjectRequiredImplementation<IView>(m_defaultNestedViewProperty);
+            EditorGUILayout.PropertyField(m_initialViewProperty, new GUIContent("Initial IView"));
+            bool initialViewIsIView = TypeRequirement.DrawObjectRequiredImplementation<IView>(m_initialViewProperty);
 
-            if (defaultViewIsCorrectType)
+            if (initialViewIsIView)
             {
-                EditorGUILayout.PropertyField(m_showDefaultViewInstantlyProperty);
-                EditorGUILayout.PropertyField(m_openDefaultViewAtNestedCloseProperty);
+                EditorGUILayout.PropertyField(m_showInitialViewInstantlyProperty);
+                EditorGUILayout.PropertyField(m_useInitialViewAsBaseProperty);
+
+                if (m_useInitialViewAsBaseProperty.boolValue == false)
+                {
+                    EditorGUILayout.PropertyField(m_baseViewProperty, new GUIContent("Base IView"));
+                    TypeRequirement.DrawObjectRequiredImplementation<IView>(m_baseViewProperty);
+                }
             }
         }
 
