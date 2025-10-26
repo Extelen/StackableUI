@@ -93,15 +93,10 @@ namespace Tellory.StackableUI.Views
             m_hasNestedViewsBeenInitialized = true;
         }
 
-        public void SwitchView(string identifier)
-        {
-            SwitchView(identifier, false);
-        }
-
-        public void SwitchView(MonoBehaviour behaviour)
-        {
-            SwitchView(behaviour, false);
-        }
+        public void SwitchView(string identifier) => SwitchView(identifier, false);
+        public void SwitchView(IView view) => SwitchView(view, false);
+        public void SwitchView(IView view, bool performInstantly) => SwitchView(view.Identifier, performInstantly);
+        public void SwitchView(MonoBehaviour behaviour) => SwitchView(behaviour, false);
 
         public void SwitchView(MonoBehaviour behaviour, bool performInstantly)
         {
